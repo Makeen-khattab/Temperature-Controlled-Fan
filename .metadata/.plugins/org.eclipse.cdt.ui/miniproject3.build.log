@@ -1,0 +1,54 @@
+22:16:48 **** Incremental Build of configuration Debug for project miniproject3 ****
+make all 
+Building file: ../miniproject3.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"miniproject3.d" -MT"miniproject3.o" -c -o "miniproject3.o" "../miniproject3.c"
+../miniproject3.c: In function 'main':
+../miniproject3.c:24: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:25: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:27: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../miniproject3.c:34: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:35: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:37: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../miniproject3.c:42: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:43: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:45: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../miniproject3.c:51: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:52: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:54: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../miniproject3.c:59: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:60: warning: pointer targets in passing argument 3 of 'LCD_displayStringRowColumn' differ in signedness
+../miniproject3.c:62: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../miniproject3.c
+ 
+Building target: miniproject3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,miniproject3.map -mmcu=atmega32 -o "miniproject3.elf"  ./adc.o ./gpio.o ./lcd.o ./lm35.o ./miniproject3.o ./motor.o ./timer0.o   
+Finished building target: miniproject3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S miniproject3.elf  >"miniproject3.lss"
+Finished building: miniproject3.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex miniproject3.elf  "miniproject3.hex"
+Finished building: miniproject3.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 miniproject3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10382 bytes (31.7% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:16:50 Build Finished. 0 errors, 15 warnings. (took 1s.580ms)
+

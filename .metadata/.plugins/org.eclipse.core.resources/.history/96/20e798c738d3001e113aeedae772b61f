@@ -1,0 +1,16 @@
+#include "lcd.h"
+
+int main(void)
+{
+	LCD_init();
+	while(1)
+	{
+LCD_moveCursor(;)
+LCD_displayCharachter('c');
+
+	}
+
+
+
+
+}

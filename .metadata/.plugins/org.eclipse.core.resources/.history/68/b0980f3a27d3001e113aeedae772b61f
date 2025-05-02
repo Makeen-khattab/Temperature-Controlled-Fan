@@ -1,0 +1,6 @@
+#include"timer0.h"
+#include "adc.h"
+#include "lm35.h"
+#include "lcd.h"
+#include "motor.h"
+
